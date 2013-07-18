@@ -1,0 +1,189 @@
+.allContent{
+    padding: 40px;
+    background-color: #FFFFFF;
+}
+
+.allContent a{
+text-decoration:none; 
+cursor:pointer;
+}
+
+.allContent .title{
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #505050;
+}
+.headDiv{
+    color: #505050;
+    background-color: #F4F4F4;
+    line-height: 120%;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.infoLineDiv{
+   width:590px;
+   padding-left:10px;
+   padding-right:10px;
+   color: #999999;
+}
+
+.content{
+    margin: 5px;
+    width:600px;
+    font-size: 12px;
+    font-family: '宋体';
+    color: #505050;
+    line-height: 150%;      
+}
+
+.content_weibo_right{
+    width:550px;
+    font-size: 12px;
+    font-family: '宋体';
+    color: #505050;
+    line-height: 150%;
+   
+}
+
+.content_weibo_author{
+    color: #75BCEA;
+}
+
+.content_weibo{
+    width:610px;
+    margin-top: 35px;
+}
+
+.weibo_img{
+    margin-left: 56px;
+    margin-top: 10px;
+    width: 440px;
+}
+
+.publish_time { 
+    float: left;
+    margin-top: 5px;
+}
+.publish_time_url{
+    color:#999999;
+}
+.repost_comment_count{
+   float: right;
+   color:#999999;
+   margin-top: 5px;
+}
+
+.operation{
+    margin-top: 10px;
+    background-image: url(/SentiInfo/style/default/icons/webpage_detail_operation_bar_bg.png);
+    width: 610px;
+    height: 45px;
+    text-align: center;
+}
+
+.operation .oper{
+    display:inline-block;
+    font-size:14px;
+    margin: 10px;
+}
+
+.note{
+   margin-top: 10px;
+   width: 610px;
+}
+
+.note table{
+    width: 610px;
+    background-color: #F4F4F4;
+    border-spacing: 0px;
+}
+.note .result{
+    background-color: #F4F4F4;
+    color:#999999;
+    font-size: 14px;
+    line-height: 150%;
+    padding: 10px;
+}
+
+.clusterInfo{
+    width: 620px;
+    margin-top: 20px;
+}
+
+.clusterInfoTitle{
+    font-size: 16px;
+    color: #999999;
+    width:110px;
+    padding-left: 15px;
+    alignment-baseline:baseline;
+    text-align: center;
+}
+
+.cross_media_cluster_top{
+    position: relative;
+    background-image: url(/SentiInfo/style/default/icons/webpage_detail_related_info_bg_top.png);
+    background-repeat: no-repeat;
+    width: 610px;
+    height: 36px;
+}
+.cross_media_cluster_content{
+     background-image: url(/SentiInfo/style/default/icons/webpage_detail_related_info_bg_middle.png);
+     background-repeat:repeat;
+     font-size: 12px;
+     height: 25px;
+}
+
+.cross_media_cluster_bottom{
+    background-image: url(/SentiInfo/style/default/icons/webpage_detail_related_info_bg_bottom.png);
+    background-repeat: no-repeat;
+    height: 14px;
+
+}
+.cluster_title{
+    font-size: 14px;
+    float: left;
+    width: 360px;
+    margin-left: 10px;
+}
+
+.cross_media_cluster_font{
+    position: absolute;
+    top:10px;
+    left:21px;
+}
+.cluster_site_name{
+    float: left;
+}
+.cluster_publish_time{
+    float: right;
+    margin-right: 20px;
+}
+.positive_word{
+    background-color:#99ff99;
+}
+.nagetive_word{
+    background-color:#ff9999;
+}
+.rank_list { margin: 0; }
+
+.middle { float:left; width:60px;}
+.middle .weibo_user_icon { border: 1px solid #AAAAAA; }
+
+.weibo_c{
+    height: 125px;
+}
+.right{
+    float: left;width: 550px;
+    height: 65px;
+}
+.search_page_detail { float: left; width: 630px; height: 23px; line-height: 22px;  border-bottom: #DCDCDC 1px solid;}
+.search_page_detail .numbers { float: left; font-size: 14px; }
+.search_page_detail .counts { float: right; font-size: 15px;}
+.search_page_detail .numbers li { float: left; height: 23px; margin-right: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #D9D9D9; }
+.search_page_detail .numbers li a { display: block; height: 23px; padding: 0 8px; text-align: center; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.search_page_detail .numbers .other a { width: 48px; padding: 0; color: #FFFFFF; background: url('../../img/bg_page_prev.png') 0 0 no-repeat; }
+.search_page_detail .numbers li a:hover { color: #FFFFFF; background: #999999; }
+.search_page_detail .numbers .selected { float: left; height: 23px; padding: 0 8px; background: #999999; }

@@ -1,0 +1,284 @@
+/* 
+    Document   : SentiInfo.js
+    Created on : 2012-9-20, 23:54:18
+    Author     : jack.zhu
+    Description: SentiInfo 公用函数库
+ */
+
+
+/**
+ * 创建命名空间
+ *
+ */
+var SentiInfo = window.SentiInfo || {};
+
+/**
+ * 扩展一个模块
+ * 将存在全局中
+ *
+ */
+SentiInfo.extend = function (name, methods) {
+	var module = SentiInfo[name] || window[name];
+	if (module == null) {
+		SentiInfo[name] = methods || {};
+		module = window[name] || SentiInfo[name];
+	} else if (methods) {
+		for(var key in methods) {
+			if (!module[key]) {
+				module[key] = methods[key];
+			}
+		}
+	}
+	window[name] = module;
+	SentiInfo.ready(module);
+};
+
+/**
+ * 扩展模块公用成员
+ *
+ */
+SentiInfo.Members = {};
+
+
+/**
+ * 扩展模块公用方法
+ *
+ */
+SentiInfo.Methods = {
+
+	/**
+	 * 扩展插件方法
+	 * 不存在全局中
+	 *
+	 */
+	extend: function (name, methods) {
+		var module = window[name] || this[name];
+		if (module == null) {
+			this[name] = methods || {};
+			module = this[name];
+		} else if (methods) {
+			for(var key in methods) {
+				if (!module[key]) {
+					module[key] = methods[key];
+				}
+			}
+		}
+		SentiInfo.ready(module);
+	}
+};
+
+/**
+ * 将页面布局元素赋值给各个模块
+ *
+ */
+SentiInfo.ready = function (module) {
+	$.extend(module, SentiInfo.Methods);
+	if ($.isFunction(module.ready)) {
+		$(function (jquery) {
+			$.extend(module, SentiInfo.Members);
+			module.ready(jquery);
+		});
+	}
+};
+$(function () {
+	$.extend(SentiInfo.Members, {
+		boot: $(window),
+		root: $(document),
+		wrapper: $('#wrapper'),
+		container: $('#container > .inner'),
+		pageLeft: $('#page_left > .inner'),
+		pageRight: $('#page_right > .inner')
+	});
+});
+
+
+/**
+ * SentiUI
+ *
+ */
+var SentiUI = {
+};
+SentiInfo.extend('SentiUI');
+
+/**
+ * EasyUI
+ *
+ */
+var EasyUI = {
+
+	// 下拉菜单
+	combobox: {
+
+		// 锁定选择
+		lockedSelect: false,
+
+		// 固定改变下拉菜单宽度
+		fixPanelWidth: function (target) {
+			var select = $(target);
+			var textbox = select.combobox('textbox');
+			var width = textbox.parent().width();
+			var panel = select.combobox('panel');
+			var pwrap = panel.parent();
+			if (width !== pwrap.width()) {
+				panel.width(width);
+				pwrap.width(width);
+			}
+		},
+
+		// 如果定义了默认值，选择默认值时代表选择全部
+		fixDefaultValue: function (target, record) {
+			var select = $(target);
+			if (this.lockedSelect) {
+				return false;
+			}
+			var options = select.combobox('options');
+			var value = options.value;
+			if (!value) {
+				return false;
+			}
+			var field = options.valueField || 'value';
+			if (record[field] !== value) {
+				select.combobox('unselect', value);
+				return false;
+			}
+			select.combobox('clear');
+			select.combobox('hidePanel');
+			this.lockedSelect = true;
+			select.combobox('select', value);
+			this.lockedSelect = false;
+			return true;
+		}
+	},
+
+	// 数据树
+	datagrid: {
+
+		// 默认目录与文件类名
+		defaultFolderClassName: 'datagrid-row-folder',
+		defaultFileClassName: 'datagrid-row-file',
+
+		// 根据ID获取关键词信息
+		getKeywordInfoByID: function (data, id) {
+			for (var i = 0, l = data.length; i < l; i++) {
+				var info = data[i];
+				if (info.id === id) {
+					return info;
+				}
+				var child = info.children;
+				if (child) {
+					child = this.getKeywordInfoByID(child, id);
+					if (child) {
+						return child;
+					}
+				}
+			}
+		},
+
+		/**
+	 	 * 增加 className 用来标识目录或文件
+		 * 主要用于控制目录或文件样式
+		 * 解决空目录时显示为文件的特殊BUG
+		 *
+		 */
+		addClassForFolderOrFile: function (data, folder, file) {
+			var parent = this;
+
+			// 设置参数默认值
+			file || (file = parent.defaultFileClassName);
+			folder || (folder = parent.defaultFolderClassName);
+
+			// 目录与文件行、标识纠正
+			$('.datagrid-body .datagrid-row').each(function () {
+				var self = $(this);
+				var id = self.attr('node-id');
+				var type = self.find('.tree-file');
+				if (type.length === 0) {
+					self.addClass(folder);
+				} else {
+					var info = parent.getKeywordInfoByID(data, id);
+					self.addClass(info.is_parent ? folder : file);
+				}
+			});
+		}
+	}
+};
+
+SentiInfo.extend('EasyUI');
+EasyUI.extend('combobox');
+EasyUI.extend('datagrid');
+
+
+$(function () {
+	var checkSessionTimer = function(){
+		var timer = setInterval(function(){
+			var url =Config.BaseURL+'login/checkSession'; 
+			$.post(url,function(data){
+					if(Config.CurrentURL == Config.BaseURL+'index.php/login' || Config.CurrentURL == Config.BaseURL+'login/'){
+						clearInterval(timer);
+					}
+					if(!data){
+						location.href =Config.BaseURL+'login';
+					}
+				},'text');
+			}
+		,1000*60*5);
+	}
+	checkSessionTimer();
+});
+
+/**
+ * 扩展提示框插件
+ * 参数：text 需要显示的文本
+ * 调用方式：$.showTips(text)
+ */
+;
+(function($){
+	$.extend({
+		showTips : function(text){				
+			$("body").append(function(index, html) {
+				var newHTML = "<div class='tips' id='tips'><div class='tips_text' id='tips_text'>你的操作已成功！</div><div class='tips_close_up' id='tips_close'></div></div>";
+				if($("#tips").html() == null){
+					return newHTML;
+				}else{
+					return "";
+				}
+			});
+			var tipsDIV = $("#tips");
+			$('#tips_close').bind({
+				click: function() {
+					tipsDIV.fadeOut("fast");
+					//$("div").remove(".tips");
+					clearTimeout(st);
+				},
+				mousedown: function() {
+					$("#tips_close").removeClass("tips_close_up").addClass("tips_close_down");
+				},
+				mouseup: function() {
+					$("#tips_close").removeClass("tips_close_down").addClass("tips_close_up");
+				}
+			});
+				
+			$(window).bind({
+				scroll : function() {
+					if(tipsDIV.html() !== null){
+						tipsDIV.fadeOut("fast");
+					// tipsDIV.css({"left":$(document).width()/2-255,"top":$(document).scrollTop()+$(window).height()-40});
+					}
+				}
+			});
+				
+			tipsDIV.css({
+				"left":$(document).width()/2-232,
+				"top":$(document).scrollTop()+$(window).height()-40
+				});
+			$("#tips_text").html(text);
+			tipsDIV.show();
+				
+			var st = setTimeout(function (){
+				tipsDIV.fadeOut("slow");
+				//$("div").remove(".tips");
+				clearTimeout(st);
+			},5000);
+		}
+	});
+})(jQuery);

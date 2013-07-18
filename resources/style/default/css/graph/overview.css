@@ -1,0 +1,180 @@
+
+/* 展开高级搜索 */
+#advance_item { display: block; }
+
+/* 媒体声量趋势图 */
+#media_volume_trend_chart {display: none; float: left;margin-top: 30px;border: #DCDCDC 1px solid;background: #FFFFFF;}
+#media_volume_trend_chart .body {font-size: 14px;width:690px; padding: 10px; }
+
+/*第二层敏感性趋势图*/
+#senti_detail_day_div {display: none; float: left;border: #DCDCDC 1px solid;background: #FFFFFF;}
+#senti_detail_day_div .body {font-size: 14px;width:690px; padding: 10px; }
+
+/*敏感性趋势图*/
+#media_senti_detail_chart {display: none; float: left;margin-top: 30px;border: #DCDCDC 1px solid;background: #FFFFFF;}
+#media_senti_detail_chart .body {font-size: 14px;width:690px; padding: 10px; }
+
+/* 中间选择器 */
+#inner_select {float: left; height: 46px; width: 710px; background: url('../../img/bg_inner_select.png') repeat-x; display: none; font-size:14px;}
+#inner_select .combo { float: left; width: 227px !important; }
+#inner_select .combo-text { width: 200px !important; }
+#inner_select .combo-arrow { width: 17px !important; }
+#inner_select_range{margin: 16px 5px; float: left}
+#inner_select_form{margin: 11px 5px; float: right}
+#inner_select_form label { float: left; margin-top: 3px;}
+#selected_time {color:#75BAE7}
+#selected_media {color:#75BAE7}
+#inner_select_form div.confirm {background-image: url("../../img/bg_search_time_selected.png"); color: #FFFFFF; cursor: pointer; float: left; height: 23px; line-height: 22px; text-align: center; width: 43px; font-size: 12px;}
+/*#inner_select_form span.expand {background: url('../../img/arrow_down.png') 0 0 no-repeat; float: right; width: 21px; height: 21px; margin: 2px 5px; cursor: pointer;}*/
+
+/* 下方媒体敏感性分布图 */
+#sentiment_pie_chart {float: left; width: 690px; padding: 10px; display: none; border: #DCDCDC 1px solid;background: #FFFFFF;}
+
+/* 下方媒体敏感性分布图 左部 */
+#sentiment_pie_chart div.left {width:145px;font-size: 14px;}
+#sentiment_pie_chart_container {width:145px;text-align:center; padding-top: 10px;}
+#sentiment_pie_chart div.left h3{font-size: 14px;font-weight: normal;text-align: center;}
+#sentiment_pie_chart div.left p{font-size: 12px;padding: 4px 10px;}
+.legend {width: 14px; height: 14px; float: left; margin-right: 4px;}
+
+#positive_num_0 {color: #4CA8E1; font-weight: bold;}
+#positive_num_1 {color: #FEC147; font-weight: bold;}
+#positive_num_2 {color: #FE6161; font-weight: bold;}
+
+/* 下方媒体敏感性分布图 右部 */
+#sentiment_pie_chart div.right {width: 545px; font-size: 14px;}
+#sentiment_pie_chart div.right p {line-height: 22px; padding-left: 10px; font-size: 14px; float: left;}
+#sentiment_pie_chart div.right p span.title {padding-right: 5px; width: 327px; float: left;}
+#sentiment_pie_chart div.right p span.author {color: #999999;
+    float: left;
+    font-size: 12px;
+    padding-right: 5px;
+    width: 80px;}
+#sentiment_pie_chart div.right p span.publish_time {width: 85px; float: right;font-size: 12px;color: #999999;}
+
+/* 地域热图 */
+#hot_map { display: none; width: 710px; float:left;border: #DCDCDC 1px solid; margin-top: 30px;}
+#hot_map .body { width: 670px; margin: 10px; padding: 10px; background: #F5FAFE; }
+#hot_map_chart { width:360px; height: 270px; float: left; overflow: hidden; }
+#hot_map_bar_chart {width: 310px; float: left;}
+
+#hot_map_bar_chart dl {float:left; margin: 15px 0 0 10px; }
+#hot_map_bar_chart dt {float:left; width: 60px; margin: 5px 0px;}
+#hot_map_bar_chart dd {float:left; margin: 5px 0px;}
+#hot_map_bar_chart .percent {background: #CAE5F6; height:14px; margin: 0px 0; float: left}
+#hot_map_bar_chart span {color: #266286; float: left; margin: 0 0 0 6px;}
+#hot_map_bar_chart .percent div { background: #47A5E2; height: 14px; float: left;}
+
+#sentiment_list_chart{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DCDCDC;
+    display: none;
+    float: left;
+    margin-top: 29px;
+    padding: 10px;
+    width: 690px;
+}
+/*敏感性趋势图 第二层点击后的详情列表*/
+/*#sentiment_list_chart  {width: 545px; font-size: 14px;}*/
+#sentiment_list_chart  p {line-height: 22px; padding-left: 10px; font-size: 14px; float: left;}
+#sentiment_list_chart  p span.title {padding-right: 5px; width: 338px; float: left;}
+#sentiment_list_chart  p span.author {color: #999999;
+    float: left;
+    font-size: 12px;
+    padding-right: 5px;
+    width: 135px;}
+#sentiment_list_chart  p span.publish_time {width: 85px; float: right;color: #999999;font-size: 12px;}
+
+.img_pie{
+    float:left;
+}
+
+a.a_link:hover {color: #75BAE7;}
+
+a.a_link_cluster:hover {color: #75BAE7;}
+.a_link_cluster{
+    color:red;
+    font-size: 12px;
+}
+.del_root {
+    background: url("../../icons/del_key.png") no-repeat scroll 0 center transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    height: 15px;
+    left: 5px;
+    opacity: 0.6;
+    position: relative;
+    top: 3px;
+    width: 15px;
+}
+
+#setting_click_senti{
+    float: right;
+    margin-top: 14px;
+}
+
+#setting_click_volume{
+    float: right;
+    margin-top: 14px;
+}
+
+.cluster_text{
+    font-size: 12px;
+    color: red;
+}
+
+#setting_click_senti_day{
+    float: right;
+    margin-top: 14px;
+}
+
+#keyword_name{
+    background: url("../../img/bg_search_keyword_all_category.png") no-repeat scroll 0 0 transparent;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    width: 103px;
+}
+
+.keyword_name_css{
+    background: url("../../img/bg_search_keyword_category.png") no-repeat scroll 0 0 transparent;
+    color: black;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    width: 103px;
+}
+.search_page {
+    border-bottom: 1px solid #DCDCDC;
+    float: left;
+    height: 23px;
+    line-height: 22px;
+    margin: 0 20px -11px;
+    padding: 20px 0;
+    width: 670px;
+}
+.combo-p {
+    /*width: 112px !important;*/
+}
+.combo-panel {
+	/*width: 112px !important;*/
+}
+
+.search_form .time_type { padding: 0;width: 148px; }
+.time_type .combo { width: 112px !important; height: 23px; line-height: 23px; font-size: 15px; border: none; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #DCDCDC; }
+.time_type .combo .combo-text { width: 90px !important; height: 23px; line-height: 23px; padding-left: 2px; font-size: 15px; border: none; background: none; }
+.time_type .combo-p .combo-panel { width: 112px !important; height: auto !important; padding: 1px 0; border: none; border-bottom-left-radius: 3px; -moz-border-bottom-left-radius: 3px; -webkit-bottom-left-border-radius: 3px; border-bottom-right-radius: 3px; -moz-border-bottom-right-radius: 3px; -webkit-bottom-right-border-radius: 3px; background: #DCDCDC; }
+
+#legend_p_0{
+    display: none;
+}
+
+#legend_p_1{
+    display: none;
+}
+
+#legend_p_2{
+    display: none;
+}

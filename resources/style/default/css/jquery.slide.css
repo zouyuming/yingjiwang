@@ -1,0 +1,73 @@
+/* 
+    Document   : jquery.slide
+    Created on : 2011-6-1, 17:47:56
+    Author     : jack.zhu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.slide_wrapper {
+        background: url("../img/unkonwn.png") no-repeat scroll 0 0 transparent;
+        height: 20px;
+        margin-top: 12px;
+        width: 20px;
+        float: left;
+        cursor: pointer;
+}
+
+.slide_wrapper, .slide_wrapper * {
+        margin: 2px;
+        padding: 0;
+}
+
+.slide_inner {
+        position: relative;
+        float: right; 
+        width: 324px;
+        overflow: hidden;
+}
+
+.slide_list {
+        position: relative;
+        z-index: 1000;
+        right: 0;
+        float: right;
+        display: none;
+        width: 300px;
+        padding: 10px 10px 8px 10px;
+        border: #999999 1px solid;
+        color: #222222;
+        background: #F3E1BA;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+}
+
+.slide_list dt {
+        clear: both;
+        font-size: 14px;
+        padding-bottom: 6px;
+        font-weight: bold;
+        color: #333333;
+        border-bottom: #999999 1px solid;
+}
+
+.slide_list dd {
+        float: left;
+        line-height: 20px;
+        padding-top: 6px;
+        font-size: 12px;
+}
+
+.slide_list dd h4 {
+        font-size: 13px;
+        color: #333333;
+}
+
+.slide_list dd strong {
+        color: #333333;
+}
+
+.slide_list dd p {
+        text-indent: 1em;
+}

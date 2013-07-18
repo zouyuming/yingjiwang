@@ -1,0 +1,67 @@
+/* 
+    Document   : manager.css
+    Created on : 2012-9-17, 21:45:25
+    Author     : jack.zhu
+    Description: 舆情分析页面样式
+*/
+
+/* EasyUI - 面板切换 */
+/*.tabs-container { width: 710px; }
+.tabs-header .tabs .tabs-selected { border: none; border-right: #E7E7E7 1px solid; background: #FFFFFF; }
+.tabs-panels { width: 710px !important; padding: 0; background: #FFFFFF; }
+.tabs-panels .panel-empty { margin: 0 0 20px 20px; }
+.tabs-panels .panel-loading { margin: 0 0 20px 20px; }
+.tabs-header{ background-color: #4DABE1; }*/
+
+
+/* 左右连接 */
+#page_left { width: 220px; }
+#page_left > .inner { position: relative; z-index: 2; width: 220px; border: none; }
+
+/* 左侧子导航树 */
+.children_tree { width: 225px; }
+.children_tree li { height: 48px; line-height: 48px; text-indent: 1em; font-size: 16px; }
+.children_tree li a { width: 220px; display: block; border-bottom: #DCDCDC 1px solid; }
+.children_tree .selected { width: 225px; background: url('../../img/bg_children_selected.png') 0 0 no-repeat; }
+.children_tree .selected a { display: block; color: #FFFFFF; }
+
+/* 左右连接 */
+#page_right { width: 740px; }
+#page_right > .inner { position: relative; z-index: 1; width: 710px; }
+
+/* 页面地址 */
+.location { padding: 14px 0 14px 20px; font-size: 16px; background: #FFFFFF; }
+
+.tabs-container { width: 710px; margin-top: 30px; }
+.tabs-container .panel-body { width: 710px !important; }
+.tabs-header {  background: url('../../img/bg_keyword_title.png')   repeat;  } 
+.tabs-header .tabs-inner{  background: url('../../img/bg_keyword_title.png')   repeat;}
+.tabs-header .tabs .tabs-title { color: #FFFFFF; font-weight: bold; }
+.tabs-header .tabs .tabs-selected { border: none; background:  #FFFFFF; }
+.tabs-header .tabs-selected .tabs-title { color: #337FE5; }
+.tabs-panels { padding: 0; background: #FFFFFF; } 
+.tabs-panels .panel-empty { margin: 0 0 20px 20px; }
+.tabs-panels .panel-loading { margin: 0 0 20px 20px; }
+
+.tabs-panels .head { line-height: 25px; padding: 20px 20px 14px 20px; background: #FFFFFF; }
+.tabs-panels .title { font-size: 18px; font-weight:  bolder; color: #505050;}
+.tabs-panels .detail {  padding-left: 50px; color: #999999; font-size: 12px }
+.tabs-panels .detail .totle {  color: #E13300; }
+.tabs-panels .source { font-size: 15px; font-weight:  bolder;color: #505050;}
+.tabs-panels .weibotitle { font-size: 13px;  color: #000 ;}
+
+
+.senti_cluster {  position: absolute; display: none; width: 16px;padding: 0 0 2px 0; background: #FFFFFF; border:  #DCDCDC 1px solid; }
+.senti_cluster_others {  clear: both; display: block; width: 16px; height: 16px; margin-top: 2px; }
+
+
+
+.slide_wrapper_cluster {
+        background: url("../../img/not_known.png") no-repeat scroll 0 0 transparent;
+        height: 20px;
+        margin-right: 15px;
+        width: 20px;
+        float: right;
+        cursor: pointer;
+}
+

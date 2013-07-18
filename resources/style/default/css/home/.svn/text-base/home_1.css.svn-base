@@ -1,0 +1,41 @@
+.head_info{
+    background: none repeat scroll 0 0 #F6F6F6;
+    width: 900px;
+}
+
+.head_info div{
+    background: none repeat scroll 0 0 #F6F6F6;
+    display: inline;
+    float: left;
+    width: 149px;
+}
+
+.div_span_font_1{
+    font-size: 17px;
+}
+
+.div_span_font_2{
+    font-size: 17px;
+}
+
+.div_span_font_3{
+    font-size: 25px;
+    font-weight: 700;
+    color: #AEAEAE;
+}
+
+.div_span_font_4{
+    font-size: 17px;
+    color: red;
+}
+
+.div_span_font_5{
+    font-size: 55px;
+    font-weight: 700;
+    color: #72C68D;
+}
+
+#div_time_zone{
+    width: 20px;
+    margin-top: 13px;
+}

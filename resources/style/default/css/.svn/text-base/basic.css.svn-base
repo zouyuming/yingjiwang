@@ -1,0 +1,42 @@
+/* 
+    Document   : basic.css
+    Created on : 2012-7-6, 11:32:50
+    Author     : jack.zhu
+    Description: 界面基本样式
+*/
+
+
+/* Tag */
+* { margin: 0; padding: 0; }
+html { position: relative; height: 100%; background: #FFFFFF; }
+body { height: 100%; font: 12px/1.125 Microsoft YaHei,Segoe UI Light,Segoe UI,Tahoma,Arial,Verdana,sans-serif; color: #222222; background: #F7F7F7; overflow-x: hidden; }
+body, button, input, select, textarea { font-family: Microsoft YaHei,Segoe UI Light,Segoe UI,Tahoma,Arial,Verdana,sans-serif; }
+button, input { border: none; background: none; }
+a { color: #222222; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a, input, textarea { outline: none; }
+ul, ol { list-style: none; }
+fieldset, img { border: none; }
+
+/* Float */
+.left { float: left; }
+.right { float: right; }
+
+/* Display */
+.closed { display: none; }
+.hidden { display: none; }
+
+/* Radius */
+.radius3 {border-radius: 3px; -moz-border-radius: 3px;}
+.radius5 {border-radius: 5px; -moz-border-radius: 5px;}
+.radius7 {border-radius: 7px; -moz-border-radius: 7px;}
+.radius9 {border-radius: 9px; -moz-border-radius: 9px;}
+
+/* Background color */
+.bg_blue {background-color: #4CA8E1}
+.bg_red {background-color: #FE6161}
+.bg_yellow {background-color: #FEC147}
+
+/* Font color */
+.highlight {color: red;}
+

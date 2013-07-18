@@ -1,0 +1,86 @@
+/* 
+    Document   : keyword_manager.css
+    Created on : 2012-9-21, 10:10:11
+    Author     : windows
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*  */
+#container > .inner { border: #DCDCDC 1px solid; }
+
+/* 左右连接 */
+#page_left { width: 220px; }
+#page_left > .inner { position: relative; z-index: 2; width: 220px; border: none; }
+
+/* 左侧子导航树 */
+.children_tree { width: 225px; }
+.children_tree li { height: 48px; line-height: 48px; text-indent: 1em; font-size: 16px; }
+.children_tree li a { width: 220px; display: block; border-bottom: #DCDCDC 1px solid; }
+.children_tree .selected { width: 225px; background: url('../../img/bg_children_selected.png') 0 0 no-repeat; }
+.children_tree .selected a { display: block; color: #FFFFFF; }
+
+/* 左右连接 */
+#page_right { width: 740px; }
+#page_right > .inner { position: relative; z-index: 1; width: 700px; padding: 14px 20px; border: none; border-left: #DCDCDC 1px solid; background: #FFFFFF; }
+
+/* 页面地址 */
+.location { padding-bottom: 14px; font-size: 16px; border-bottom: #DCDCDC 1px solid; }
+
+/* 过滤按钮*/
+.filter_button {
+    float: right;
+    margin-right: 10px;
+}
+.filter_button a:hover{
+    color: #222222;
+    text-decoration: none;
+}
+
+.undelete_btn {
+    color: blue;
+    text-decoration: underline;
+}
+
+.filter {
+    background: url("../../img/bg_keyword_title_x.png") repeat-x scroll 0 0 transparent;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    height: 29px;
+    line-height: 28px;
+    margin-left: 30px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    width: 108px;
+}
+.filter_all {
+    background: url("../../img/bg_keyword_title_x.png") repeat-x scroll 0 0 transparent;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    height: 29px;
+    line-height: 28px;
+    margin-left: 30px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    width: 108px;
+}
+
+
+/* 表格容器 */
+.content { margin-top: 20px; padding: 20px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #DDDDDD; }
+
+/* 日志表格样式 */
+table.user_log {width:100%}
+table.user_log th {background: url("../../img/bg_keyword_title_x.png") repeat-x scroll 0 0 transparent; font-size: 15px; padding: 0; height: 20px}
+/*
+div.datagrid-cell-c1-content{
+    width: 345px;
+}*/

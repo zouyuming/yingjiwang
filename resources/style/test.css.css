@@ -1,0 +1,89 @@
+/* 
+    Document   : test.css
+    Created on : 2013-1-11, 14:37:19
+    Author     : windows
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.senti_info:nth-child(2n) {
+    background: none repeat scroll 0 0 #F0F0F0;
+}
+.senti_info:nth-child(n) {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.senti_info {
+    float: left;
+    height: 100%;
+    padding: 20px;
+    width: 670px;
+}
+.senti_info .left {
+    float: left;
+    position: relative;
+    width: 26px;
+}
+.senti_info .middle {
+    float: left;
+    width: 60px;
+}
+.senti_info .right {
+    float: left;
+    position: relative;
+}
+
+.senti_info .left li {
+    clear: both;
+    margin-bottom: 8px;
+    padding-left: 1px;
+    width: 25px;
+}
+.senti_info .left .others {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DCDCDC;
+    display: none;
+    padding: 0 0 2px;
+    position: absolute;
+    top: 18px;
+    width: 16px;
+}
+.senti_info .left .others a {
+    clear: both;
+    display: block;
+    height: 16px;
+    margin-top: 2px;
+    width: 16px;
+}
+
+.senti_info .left input {
+    margin-left: 2px;
+}
+button, input {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+}
+body, button, input, select, textarea {
+    font-family: Microsoft YaHei,Segoe UI Light,Segoe UI,Tahoma,Arial,Verdana,sans-serif;
+}
+
+fieldset, img {
+    border: medium none;
+}
+a, input, textarea {
+    outline: medium none;
+}
+a {
+    color: #222222;
+    text-decoration: none;
+}
+.left {
+    float: left;
+}
+ul, ol {
+    list-style: none outside none;
+}
+

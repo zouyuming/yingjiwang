@@ -1,0 +1,155 @@
+/* 
+    Document   : module.css
+    Created on : 2012-9-17, 16:26:34
+    Author     : jack.zhu
+    Description:
+        页面模块样式表
+*/
+
+/* .sentibox [ */
+
+	/* 共用BOX */
+	.sentibox { border: 1px solid #DCDCDC; background: #FFFFFF; }
+	.sentibox .head { clear: both; height: 45px; line-height: 45px; background: url("../img/bg_sentibox_title_x.png") 0 0 repeat-x; border-bottom: 1px solid #DCDCDC; font-size: 16px; padding: 0 10px; }
+	.sentibox .body { float: left; }
+
+/* ] .sentibox */
+
+/* #header [ */
+
+	/* 产品 logo */
+	.logo { float: left; width: 210px; height: 60px; margin-top: 20px; font-weight: 500; background: url('../img/sentiinfo_logo.png') 0 0 no-repeat; }
+
+	/* 导航栏树 - 顶级分类 */
+	.navigate_tree { float: right; margin: 32px 0; font-size: 15px; /*overflow: hidden;*/ }
+	.navigate_tree .level_0 { float: left; margin-left: -1px; text-align: center; border-left: #CCCCCC 1px dotted;position: relative; }
+	.navigate_tree .level_0 a { width: 71px; height: 26px; line-height: 24px; margin: 0 10px; display: block; }
+	.navigate_tree .selected a { color: #FFFFFF; background: url('../img/bg_navigate_selected.png') 0 0 no-repeat; }
+
+	/* 导航栏树 - 一级分类 */
+	.navigate_tree .level_1 { display: none;font-size: 14px;left: 6px;position: absolute;text-align: left;top: 25px; background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #C4C4C4;
+        border-radius: 3px 3px 3px 3px;
+        padding: 0 5px;
+        width: 85px;
+        z-index: 1001;}
+
+/* ] #header */
+
+/* #page_left [ */
+
+	/* 关键字树 - 窗口样式 */
+	.keyword_list { clear: both; width: 220px; }
+	.keyword_list dt { clear: both; width: 220px; height: 48px; line-height: 47px; background: url('../img/bg_keyword_title.png') 0 0 no-repeat; }
+	.keyword_list dt .title { float: left; margin-left: 15px; font-size: 16px; color: #FFFFFF; }
+	.keyword_list dt .setting { float: right; width: 18px; height: 18px; margin: 15px 15px 15px 0; cursor: pointer; background: url('../img/bg_keyword_setting.png') 0 0 no-repeat; }
+	.keyword_list dd { width: 220px; overflow: hidden; }
+	
+	/* 关键字树 - 基本样式 */
+	.keyword_tree { clear: both; width: 220px; }
+	.keyword_tree li { clear: both; width: 220px; overflow: hidden; }
+	.keyword_tree .children { margin-top: -1px; }
+	.keyword_tree .title { clear: both; width: 220px; line-height: 47px; }
+	.keyword_tree .wrap { clear: both; width: 218px; height: 46px; line-height: 45px; margin: 1px; }
+	.keyword_tree .link { float: left; text-indent: 1em; font-size: 15px; }
+	.keyword_tree .status { float: left; width: 30px; height: 22px; line-height: 18px; margin: 15px 0 0 10px; text-align: center; font-weight: bold; font-size: 12px; color: #FFFFFF; background: url('../img/bg_keyword_unread.png') 0 0 no-repeat; cursor: pointer;}
+	.keyword_tree .parent { margin-top: -1px; background: url('../img/bg_keyword_parent.png') 0 0 no-repeat; }
+	.keyword_tree .child { margin-top: -1px; background: url('../img/bg_keyword_child.png') 0 0 no-repeat; }
+	.keyword_tree .switch { float: right; width: 18px; height: 18px; margin: 15px 10px 0 0; cursor: pointer; opacity: 0.6; filter: aplha(opacity=60); }
+	.keyword_tree .switch:hover { opacity: 1; filter: aplha(opacity=100); }
+	.keyword_tree .expand { background: url('../img/bg_keyword_expand.png') 0 0 no-repeat; }
+	.keyword_tree .collapse { background: url('../img/bg_keyword_collapse.png') 0 0 no-repeat; }
+	.keyword_tree .selected { font-weight: bold; background: #F7F4E5 !important; }
+
+	/* 第一级样式 */
+	.keyword_tree .level_1 > .wrap { background: #FFFFFF; }
+	
+	/* 纠正2个父类在一起样式 */
+	.keyword_tree .level_2 > li:first-child .parent { margin: 0; }
+	
+	/* 支持最多5层级分类样式 */
+	.keyword_tree .level_1 .link { text-indent: 1em; }
+	.keyword_tree .level_2 .link { text-indent: 2em; }
+	.keyword_tree .level_3 .link { text-indent: 3em; }
+	.keyword_tree .level_4 .link { text-indent: 4em; }
+	.keyword_tree .level_5 .link { text-indent: 5em; }
+	
+	/* 媒体声量排行榜 */
+	.rank_list { float: left; width: 220px; margin-top: 30px; padding-bottom: 10px; background: #FFFFFF; }
+	.rank_list .head { clear: both; width: 200px; height: 50px; line-height: 50px; padding: 0 10px; font-size: 16px; border-bottom: #DCDCDC 1px solid; background: url('../img/bg_sentibox_title_x.png') 0 0 repeat-x; }
+	.rank_list .body { clear: both; width: 200px; padding: 0 10px; }
+	.rank_list .body dt { float: left; width: 64px; font-size: 14px; margin: 10px 3px 0; text-align: right; }
+	.rank_list .body dd { float: left; width: 130px; font-size: 14px; margin: 10px 0 0; }
+	.rank_list .body dd .percent { background: url('../img/ranklist_outter_bg.png') 0 0 repeat-x; height: 10px; margin: 3px;  padding: 1px; border-radius: 5px; -moz-border-radius: 5px; }
+	.rank_list .body dd .percent div { background: url('../img/ranklist_inner_bg.png') 0 0 repeat-x; height: 6px; margin: 2px; float: left; border-top-left-radius: 3px; border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; }
+
+    /* 词频云图 */
+	.word_cloud { clear: both;float: left; width: 220px; margin-top: 30px; background: #FFFFFF; }
+	.word_cloud .head { clear: both; width: 200px; height: 50px; line-height: 50px; padding: 0 10px; font-size: 16px; border-bottom: #DCDCDC 1px solid; background: url('../img/bg_sentibox_title_x.png') 0 0 repeat-x; }
+	.word_cloud .head .setting { float: right; width: 25px; height: 25px; margin-top: 14px; cursor: pointer; background: url('../img/word_cloud_tag.png') 0 0 no-repeat; }
+	.word_cloud .body { clear: both; width: 200px; padding: 0 10px; position:relative; height: 200px }
+    .word_cloud .body a { text-decoration: none; }
+    .word_cloud .body a:hover { font-weight: bold; }
+        .word_cloud .waite {height: 10px;  width: 130px; font-size: 14px; margin: 0 auto; display: none;    }             
+/* ] #page_left */
+
+/* #page_right [ */
+ 
+	/* 搜索栏 - 基本样式 */
+	.search_form { float: right; width: 680px; padding: 0 14px; border: #DCDCDC 1px solid; background: #FFFFFF; }
+	.search_form .inner { width: 680px; }
+	.search_form .line { clear: both; width: 680px; height: 24px; margin-top: -1px; padding: 12px 0; border-top: #DCDCDC 1px solid; }
+
+	.search_form dl { float: left; height: 23px; line-height: 22px; padding-right: 5px; }
+	.search_form dt { float: left; height: 23px; padding-right: 5px; font-size: 15px; }
+	.search_form dd { float: left; height: 23px; font-size: 14px; }
+
+	/* 搜索栏 - 时间选择 */
+	.search_form #time_type { padding: 0;width: 100px; }
+	.search_form .end_time { padding: 0; }
+	.search_form .custom_time { float: left; width: 23px; height: 23px; margin: 0 5px 0 7px; font-size: 0; cursor: pointer; background: url('../img/bg_search_time_calendar.png') 0 0 no-repeat; }
+	.search_form .select_time { display: none; }
+	.search_form .combo-f { display: none; }
+	.search_form .combobox-f { display: none; }
+	.search_form .datebox { width: 140px !important; }
+	.search_form .datebox .combo-text { width: 113px !important; }
+
+	/* 搜索栏 - 高级搜索开关 */
+	.search_form .advance_item { display: none; }
+	.search_form .expand { float: right; width: 23px; height: 23px; cursor: pointer; background: url('../img/bg_search_expand.png') 0 0 no-repeat; }
+	.search_form .collapse { float: right; width: 23px; height: 23px; cursor: pointer; background: url('../img/bg_search_collapse.png') 0 0 no-repeat; }
+
+	/* 搜索栏 - 关键词搜索框 */
+	.search_form .include { padding: 0; }
+	.search_form .include dt { width: 103px; padding: 0; text-align: center; color: #FFFFFF; cursor: pointer; background: url('../img/bg_search_keyword_category.png') 0 0 no-repeat; }
+	.search_form .include dd { margin-left: 5px; }
+	.search_form .include .input { background: url('../img/bg_search_keyword_input.png') 0 0 no-repeat; }
+	.search_form .include .text { float: left; width: 149px; height: 23px; padding: 0 3px; }
+	.search_form .include .submit { float: left; width: 26px; height: 23px; cursor: pointer; }
+
+	/* 搜索栏 - 图表类型 */
+	.search_form .chart_type .combo { width: 250px !important; }
+	.search_form .chart_type .combo-text { width: 223px !important; }
+	.search_form .complete { float: left; width: 43px; height: 23px; line-height: 22px; text-align: center; font-weight: bold; color: #FFFFFF; cursor: pointer; background-image: url('../img/bg_search_time_selected.png'); }
+	
+	/* 搜索栏 - 搜索分页 */
+	.search_page { float: left; width: 670px; height: 23px; line-height: 22px; margin: 0 20px; padding: 20px 0; border-bottom: #DCDCDC 1px solid; }
+	.search_page .numbers { float: left; font-size: 14px; }
+	.search_page .counts { float: right; font-size: 15px; }
+	.search_page .numbers li { float: left; height: 23px; margin-right: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #D9D9D9; }
+	.search_page .numbers li a { display: block; height: 23px; padding: 0 8px; text-align: center; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+	.search_page .numbers .other a { width: 48px; padding: 0; color: #FFFFFF; background: url('../img/bg_page_prev.png') 0 0 no-repeat; }
+	.search_page .numbers li a:hover { color: #FFFFFF; background: #999999; }
+	.search_page .numbers .selected { float: left; height: 23px; padding: 0 8px; background: #999999; }
+
+	/* 搜索栏 - 批量操作 */
+	.batch_operation { float: left; width: 670px; margin: 0 20px; padding: 20px 0; }
+	.batch_operation li { float: left; margin-right: 15px; padding-left: 20px; font-size: 15px; cursor: pointer; }
+	.batch_operation .select { padding: 0; }
+	.batch_operation .select input { float: left; margin-top: 3px; }
+	.batch_operation .select span { float: left; margin-left: 5px; }
+	.batch_operation .remove { background: url('../icons/del.png') 0 center no-repeat; }
+	.batch_operation .confirm { padding-left: 20px; background: url('../icons/make_confirm_icon.png') 0 center no-repeat; }
+	.batch_operation .excel { padding-left: 20px; background: url('../icons/excel.png') 0 center no-repeat; }
+
+/* #page_right ] */

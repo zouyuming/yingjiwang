@@ -1,0 +1,39 @@
+/* 
+    Document   : layout.css
+    Created on : 2012-7-13, 10:36:37
+    Author     : windows
+    Description: 页面布局样式
+*/
+
+
+/* #wrapper [ */
+	#wrapper { clear: both; width: 100%; }
+
+	/* #header [ */
+		#header { clear: both; width: 100%; height: 90px; background: url('../img/bg_navigate_gap_x.png') 0 bottom repeat-x; }
+		#header > .inner { clear: both; width: 960px; margin: 0 auto; }
+	/* ] #header */
+
+	/* #container [ */
+		#container { clear: both; width: 100%; padding: 30px 0; background: #EFEFEF; overflow: hidden; }
+		#container > .inner { clear: both; width: 960px; margin: 0 auto; overflow: hidden; }
+
+		/* #page_left [ */
+			#page_left { float: left; width: 220px; }
+			#page_left > .inner { float: left; }
+		/* ] #page_left */
+
+		/* #page_right { */
+			#page_right { float: right; width: 710px; }
+			#page_right > .inner { float: right; }
+		/* } #page_right */
+
+	/* ] #container */
+
+	/* #footer [ */
+		#footer { clear: both; width: 100%; padding: 30px 0; border-top: #B1B1B1 1px solid; }
+		#footer > .inner { clear: both; width: 960px; margin: 0 auto; }
+	/* ] #footer */
+
+/* ] #wrapper */
+
